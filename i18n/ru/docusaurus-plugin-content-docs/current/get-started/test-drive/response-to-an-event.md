@@ -19,7 +19,7 @@ XAML файл главного окна, связан с файлом C#. Есл
 
 Для его изменения:
 
-- Откройте файл `MainWindows.axaml.cs`
+- Откройте файл `MainView.axaml.cs`
 
 Вы увидите код C#, похожий на нижеуказанный:
 
@@ -28,9 +28,9 @@ using Avalonia.Controls;
 
 namespace GetStartedApp
 {
-    public partial class MainWindow : Window
+    public partial class MainView : UserControl
     {
-        public MainWindow()
+        public MainView()
         {
             InitializeComponent();
         }
@@ -38,18 +38,18 @@ namespace GetStartedApp
 }
 ```
 
-Частичный класс `MainWindow`, соотстветстует объекту `Window`, который создается Avalonia UI
+Частичный класс `MainView`, соотстветстует объекту `UserControl`, который создается Avalonia UI
 на основании существующего файла XAML. Вы можете найти его по тегу:
 
 ```xml
-<Window 
+<UserControl
     ...
-    x:Class="GetStartedApp.MainWindow" >
-</Window>
+    x:Class="GetStartedApp.Views.MainView">
+</UserControl>
 ```
 
-To add an event handler for the button, follow this procedure:
-- В файле `MainWindows.axaml.cs`, найдите конструктор `MainWindows` (инструкция была ранее)
+Чтобы добавить обработчик событий для кнопки, выполните следующее:
+- В файле `MainView.axaml.cs`, найдите конструктор `MainView` (инструкция была ранее)
 - Добавьте следующий код после конструктора:
 
 ```csharp
