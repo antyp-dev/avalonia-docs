@@ -34,7 +34,7 @@ import Highlight from '@site/src/components/Highlight';
 
 Для демонстрации доступа к значению при изменении `celsius`, выполните следующие действия:
 
-* Переключтесь на файл **MainWindows.axaml.cs**.
+* Переключтесь на файл **MainView.axaml.cs**.
 * Найдите событие `ButtonClicked`.
 * Измените вывод `Debug.WriteLine`, чтобы увидеть изменение свойства `celsius` в консоли, например:
 
@@ -52,7 +52,7 @@ Debug.WriteLine($"Click! Celsius={celsius.Text}");
 Tf = Tc * (9/5) + 32
 ```
 
-To add the conversion formula, follow this procedure:
+Чтобы добавить формулу преобразования, выполните следующее:
 
 - Найдите событие `ButtonClicked`.
 - Добавьте проверку вводимого текста на число. 
@@ -60,7 +60,7 @@ To add the conversion formula, follow this procedure:
 - Получившееся значение укажите в Control Fahrenheit.
 - Запустите приложение и проверьте результат.
 
-Одна из возможных реализация:
+Одна из возможных реализаций:
 
 ```csharp
 if (Double.TryParse(celsius.Text, out double C))
